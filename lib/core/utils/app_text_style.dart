@@ -10,5 +10,32 @@ abstract class AppTextStyle {
     color: AppColors.deepBrown,
     fontFamily: 'Pacifico',
   );
-  
+
+  static final poppins300style16 = const TextStyle(
+    fontSize: 16,
+    fontWeight: FontWeight.w300,
+    color: AppColors.black,
+    fontFamily: 'Poppins',
+  );
+
+  static final poppins400style16 = const TextStyle(
+    fontSize: 16,
+    fontWeight: FontWeight.w300,
+    color: AppColors.black,
+    fontFamily: 'Poppins',
+  );
+
+  static final poppins500style24 = const TextStyle(
+    fontSize: 24,
+    fontWeight: FontWeight.w500,
+    color: Colors.black,
+    fontFamily: 'Poppins',
+  );
+
+  static final poppins500style18 = const TextStyle(
+    fontSize: 24,
+    fontWeight: FontWeight.w500,
+    color: AppColors.offWhite,
+    fontFamily: 'Poppins',
+  );
 }
