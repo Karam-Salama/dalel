@@ -3,6 +3,7 @@
 import 'package:dalel_app/core/utils/app_assets.dart';
 import 'package:dalel_app/core/utils/app_strings.dart';
 import 'package:dalel_app/core/utils/app_text_style.dart';
+import 'package:dalel_app/features/on_Boarding/data/model/onBoarding_model.dart';
 import 'package:dalel_app/features/on_Boarding/presentation/views/widgets/custom_smooth_page_indicator.dart';
 import 'package:flutter/material.dart';
 
@@ -16,21 +17,23 @@ class OnBoardingWigetBody extends StatelessWidget {
       child: PageView.builder(
           physics: const BouncingScrollPhysics(),
           controller: controller,
-          itemCount: 3,
+          itemCount: onBoardingList.length,
           itemBuilder: (context, index) {
             return Column(children: [
               Container(
                 width: 343,
                 height: 290,
-                decoration: const BoxDecoration(
-                    image: DecorationImage(
-                        image: AssetImage(Assets.imagesOnBoarding1))),
+                decoration:  BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage(onBoardingList[index].imagePath),
+                  ),
+                ),
               ),
               const SizedBox(height: 24),
               CustomSmoothPageIndicator(controller: controller),
               const SizedBox(height: 32),
               Text(
-                AppStrings.titleOnBoarding1,
+                onBoardingList[index].title,
                 style: AppTextStyle.poppins500style24
                     .copyWith(fontWeight: FontWeight.bold),
                 textAlign: TextAlign.center,
@@ -39,7 +42,7 @@ class OnBoardingWigetBody extends StatelessWidget {
               ),
               const SizedBox(height: 16),
               Text(
-                AppStrings.subTitleOnBoarding1,
+                onBoardingList[index].subTitle,
                 style: AppTextStyle.poppins300style16,
                 textAlign: TextAlign.center,
               ),
