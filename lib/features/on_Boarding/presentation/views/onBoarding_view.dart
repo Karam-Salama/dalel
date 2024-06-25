@@ -1,6 +1,7 @@
 // ignore_for_file: file_names, prefer_final_fields
 
 import 'package:dalel_app/core/functions/app_functions.dart';
+import 'package:dalel_app/features/on_Boarding/presentation/views/functions/onboarding.dart';
 import 'package:dalel_app/features/on_Boarding/presentation/views/widgets/custom_nav_bar.dart';
 import 'package:dalel_app/features/on_Boarding/presentation/views/widgets/get_buttons.dart';
 import 'package:dalel_app/features/on_Boarding/presentation/views/widgets/onBoarding_body_widget.dart';
@@ -28,9 +29,8 @@ class _OnBoardingViewState extends State<OnBoardingView> {
             const SizedBox(height: 40),
             CustomNavBar(
               onPressed: () {
-                currentPage == 2
-                    ? customReplacementNavigate(context, '/signUp')
-                    : _controller.jumpToPage(2);
+                onBoardingVisited();
+                customReplacementNavigate(context, '/signUp');
               },
             ),
             const SizedBox(height: 32),
