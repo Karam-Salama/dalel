@@ -10,6 +10,12 @@ abstract class AppTextStyle {
     color: AppColors.deepBrown,
     fontFamily: 'Pacifico',
   );
+  static final pacifico600style28 = const TextStyle(
+    fontSize: 28,
+    fontWeight: FontWeight.w600,
+    color: AppColors.deepBrown,
+    fontFamily: 'Pacifico',
+  );
 
   static final poppins300style16 = const TextStyle(
     fontSize: 16,
@@ -33,9 +39,23 @@ abstract class AppTextStyle {
   );
 
   static final poppins500style18 = const TextStyle(
-    fontSize: 24,
+    fontSize: 18,
     fontWeight: FontWeight.w500,
     color: AppColors.offWhite,
+    fontFamily: 'Poppins',
+  );
+
+  static final poppins500style12 = const TextStyle(
+    fontSize: 12,
+    fontWeight: FontWeight.w500,
+    color: AppColors.deepGrey,
+    fontFamily: 'Poppins',
+  );
+
+  static final poppins600style28 = const TextStyle(
+    fontSize: 28,
+    fontWeight: FontWeight.w600,
+    color: AppColors.black,
     fontFamily: 'Poppins',
   );
 }

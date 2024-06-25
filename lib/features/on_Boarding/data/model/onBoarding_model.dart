@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:dalel_app/core/utils/app_assets.dart';
 import 'package:dalel_app/core/utils/app_strings.dart';
 
