@@ -1,20 +1,26 @@
 // ignore_for_file: must_be_immutable, file_names
 
-import 'package:dalel_app/core/utils/app_assets.dart';
-import 'package:dalel_app/core/utils/app_strings.dart';
+
 import 'package:dalel_app/core/utils/app_text_style.dart';
 import 'package:dalel_app/features/on_Boarding/data/model/onBoarding_model.dart';
 import 'package:dalel_app/features/on_Boarding/presentation/views/widgets/custom_smooth_page_indicator.dart';
 import 'package:flutter/material.dart';
 
 class OnBoardingWigetBody extends StatelessWidget {
-  OnBoardingWigetBody({super.key});
-  PageController controller = PageController();
+  const OnBoardingWigetBody({
+    super.key,
+    required this.controller,
+    this.onPageChanged,
+  });
+
+  final PageController controller;
+  final Function(int)? onPageChanged;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       height: 500,
       child: PageView.builder(
+          onPageChanged: onPageChanged,
           physics: const BouncingScrollPhysics(),
           controller: controller,
           itemCount: onBoardingList.length,
@@ -23,7 +29,7 @@ class OnBoardingWigetBody extends StatelessWidget {
               Container(
                 width: 343,
                 height: 290,
-                decoration:  BoxDecoration(
+                decoration: BoxDecoration(
                   image: DecorationImage(
                     image: AssetImage(onBoardingList[index].imagePath),
                   ),
