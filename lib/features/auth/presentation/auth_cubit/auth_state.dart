@@ -25,3 +25,14 @@ final class SignInErrorState extends AuthState {
 
   SignInErrorState({required this.errorMessage});
 }
+
+
+final class ResetPasswordLoadingState extends AuthState {}
+
+final class ResetPasswordSuccessState extends AuthState {}
+
+final class ResetPasswordErrorState extends AuthState {
+  final String errorMessage;
+
+  ResetPasswordErrorState({required this.errorMessage});
+}

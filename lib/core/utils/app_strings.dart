@@ -69,7 +69,7 @@ class AppStrings {
   // region ForgotPassword
   static const String forgotPasswordScreen = 'Forgot Password';
   static const String forgotPasswordScreenSubTitle = 'Enter your registered email below to receive password reset instruction';
-  static const String sendVerificationCode = 'Send Verification Code';
+  static const String sendResetPasswordLink = 'Send Reset Password Link';
 
   // region Verify Account
   static const String verifyAccountScreen = 'Verify Account';

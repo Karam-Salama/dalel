@@ -4,6 +4,7 @@ import 'package:bloc/bloc.dart';
 import 'package:dalel_app/features/auth/presentation/auth_cubit/auth_state.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
 
 class AuthCubit extends Cubit<AuthState> {
@@ -17,6 +18,7 @@ class AuthCubit extends Cubit<AuthState> {
   bool? obscurePasswordTextValue = true;
   GlobalKey<FormState> signUpFormKey = GlobalKey();
   GlobalKey<FormState> signInFormKey = GlobalKey();
+  GlobalKey<FormState> forgetPasswordFormKey = GlobalKey();
 
   signUpWithEmailAndPassword() async {
     try {
@@ -27,7 +29,7 @@ class AuthCubit extends Cubit<AuthState> {
         email: emailAddress!,
         password: password!,
       );
-      
+
       verifyEmail();
       // * emit sign up success state
       emit(SignUpSuccessState());
@@ -98,6 +100,19 @@ class AuthCubit extends Cubit<AuthState> {
     } catch (e) {
       // ! emit sign in error state
       emit(SignInErrorState(errorMessage: e.toString()));
+    }
+  }
+
+  resetPasswordWithLink() async {
+    try {
+      // ? emit reset password loading state
+      emit(ResetPasswordLoadingState());
+      await FirebaseAuth.instance.sendPasswordResetEmail(email: emailAddress!);
+      // * emit reset password success state
+      emit(ResetPasswordSuccessState());
+    } catch (e) {
+      // ! emit reset password error state
+      emit(ResetPasswordErrorState(errorMessage: e.toString()));
     }
   }
 }
