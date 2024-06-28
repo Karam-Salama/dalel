@@ -2,8 +2,8 @@ import 'package:dalel_app/core/utils/app_colors.dart';
 import 'package:dalel_app/core/utils/app_text_style.dart';
 import 'package:flutter/material.dart';
 
-class AlreadyHaveAccountWidget extends StatelessWidget {
-  const AlreadyHaveAccountWidget({
+class HaveAccountWidget extends StatelessWidget {
+  const HaveAccountWidget({
     super.key,
     required this.textpart1,
     required this.textpart2,

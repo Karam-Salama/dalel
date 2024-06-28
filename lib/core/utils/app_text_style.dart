@@ -60,4 +60,11 @@ abstract class AppTextStyle {
     color: AppColors.black,
     fontFamily: 'Poppins',
   );
+
+  static final saira700style32 = const TextStyle(
+    fontSize: 32,
+    fontWeight: FontWeight.w700,
+    color: AppColors.offWhite,
+    fontFamily: 'Saira',
+  );
 }
