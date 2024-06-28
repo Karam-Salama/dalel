@@ -27,7 +27,8 @@ class AuthCubit extends Cubit<AuthState> {
         email: emailAddress!,
         password: password!,
       );
-
+      
+      verifyEmail();
       // * emit sign up success state
       emit(SignUpSuccessState());
     } on FirebaseAuthException catch (e) {
@@ -43,11 +44,18 @@ class AuthCubit extends Cubit<AuthState> {
       if (e.code == 'invalid-email') {
         // ! emit sign up error state
         emit(SignUpErrorState(errorMessage: 'Invalid email address.'));
+      } else {
+        // ! emit sign up error state
+        emit(SignUpErrorState(errorMessage: e.toString()));
       }
     } catch (e) {
       // ! emit sign up error state
       emit(SignUpErrorState(errorMessage: e.toString()));
     }
+  }
+
+  verifyEmail() async {
+    await FirebaseAuth.instance.currentUser!.sendEmailVerification();
   }
 
   updateTermsAndConditionsCheckbox({required bool newValue}) {

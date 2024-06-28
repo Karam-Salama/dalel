@@ -20,12 +20,12 @@ class CustomSignUpForm extends StatelessWidget {
         if (state is SignUpSuccessState) {
           CherryToast.success(
             inheritThemeColors: true,
-            title: const Text("User added successfully ✅",
+            title: const Text("Successfully, Check Your Email To Verify Your Account",
                 style: TextStyle(color: Colors.black)),
             borderRadius: 0,
           ).show(context);
           Future.delayed(const Duration(seconds: 2), () {
-            customReplacementNavigate(context, '/home');
+            customReplacementNavigate(context, '/signIn');
           });
         } else if (state is SignUpErrorState) {
           CherryToast.error(
