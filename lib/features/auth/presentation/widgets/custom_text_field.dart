@@ -8,11 +8,15 @@ class CustomTextFormField extends StatelessWidget {
     required this.labelText,
     this.onChanged,
     this.onFieldSubmitted,
+    this.obscureText,
+    this.suffixIcon,
   });
 
   final String labelText;
   final Function(String)? onChanged;
   final Function(String)? onFieldSubmitted;
+  final bool? obscureText;
+  final Widget? suffixIcon;
 
   @override
   Widget build(BuildContext context) {
@@ -27,9 +31,12 @@ class CustomTextFormField extends StatelessWidget {
         },
         onChanged: onChanged,
         onFieldSubmitted: onFieldSubmitted,
+        obscureText: obscureText ?? false,
         decoration: InputDecoration(
           labelStyle: AppTextStyle.poppins500style18
               .copyWith(color: AppColors.deepGrey),
+          suffixIcon: suffixIcon,
+
           enabledBorder: getBorderStyle(),
           focusedBorder: getBorderStyle(),
           border: getBorderStyle(),

@@ -3,11 +3,12 @@ import 'package:dalel_app/core/utils/app_text_style.dart';
 import 'package:flutter/material.dart';
 
 class AlreadyHaveAccountWidget extends StatelessWidget {
-  const AlreadyHaveAccountWidget(
-      {super.key,
-      required this.textpart1,
-      required this.textpart2,
-      required this.onPress});
+  const AlreadyHaveAccountWidget({
+    super.key,
+    required this.textpart1,
+    required this.textpart2,
+    required this.onPress,
+  });
   final String textpart1;
   final String textpart2;
   final VoidCallback onPress;
@@ -35,4 +36,3 @@ class AlreadyHaveAccountWidget extends StatelessWidget {
     );
   }
 }
-

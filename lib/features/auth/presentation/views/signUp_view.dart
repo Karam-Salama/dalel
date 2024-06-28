@@ -1,5 +1,6 @@
 // ignore_for_file: file_names
 
+import 'package:dalel_app/core/functions/app_functions.dart';
 import 'package:dalel_app/core/utils/app_strings.dart';
 import 'package:dalel_app/features/auth/presentation/widgets/already_have_account_widget.dart';
 import 'package:dalel_app/features/auth/presentation/widgets/custom_signUp_form.dart';
@@ -25,7 +26,9 @@ class SignUpView extends StatelessWidget {
                 child: AlreadyHaveAccountWidget(
               textpart1: AppStrings.alreadyHaveAccount,
               textpart2: AppStrings.signIn,
-              onPress: () {},
+              onPress: () {
+                customNavigate(context, '/signIn');
+              },
             )),
             const SliverToBoxAdapter(child: SizedBox(height: 17)),
           ],

@@ -1,3 +1,5 @@
+import 'package:cherry_toast/cherry_toast.dart';
+import 'package:dalel_app/core/functions/app_functions.dart';
 import 'package:dalel_app/core/utils/app_colors.dart';
 import 'package:dalel_app/core/utils/app_strings.dart';
 import 'package:dalel_app/core/widgets/custom_btn.dart';
@@ -14,7 +16,26 @@ class CustomSignUpForm extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocConsumer<AuthCubit, AuthState>(
-      listener: (BuildContext context, state) {},
+      listener: (BuildContext context, state) {
+        if (state is SignUpSuccessState) {
+          CherryToast.success(
+            inheritThemeColors: true,
+            title: const Text("User added successfully ✅",
+                style: TextStyle(color: Colors.black)),
+            borderRadius: 0,
+          ).show(context);
+          Future.delayed(const Duration(seconds: 2), () {
+            customReplacementNavigate(context, '/home');
+          });
+        } else if (state is SignUpErrorState) {
+          CherryToast.error(
+            inheritThemeColors: true,
+            title: Text(state.errorMessage,
+                style: const TextStyle(color: Colors.black)),
+            borderRadius: 0,
+          ).show(context);
+        }
+      },
       builder: (BuildContext context, state) {
         AuthCubit authCubit = BlocProvider.of<AuthCubit>(context);
         return Form(
@@ -41,6 +62,17 @@ class CustomSignUpForm extends StatelessWidget {
               ),
               CustomTextFormField(
                 labelText: AppStrings.password,
+                suffixIcon: IconButton(
+                  icon: Icon(
+                    authCubit.obscurePasswordTextValue == true
+                        ? Icons.visibility_outlined
+                        : Icons.visibility_off_outlined,
+                  ),
+                  onPressed: () {
+                    authCubit.obscurePasswordText();
+                  },
+                ),
+                obscureText: authCubit.obscurePasswordTextValue,
                 onChanged: (password) {
                   authCubit.password = password;
                 },
@@ -48,18 +80,23 @@ class CustomSignUpForm extends StatelessWidget {
               const SizedBox(height: 16),
               const TermsAndConditionsWidget(),
               const SizedBox(height: 88),
-              CustomBtn(
-                  text: AppStrings.signUp,
-                  color: authCubit.isTermsAndConditionsAccepted == false
-                      ? AppColors.grey
-                      : null,
-                  onPressed: () {
-                    if (authCubit.isTermsAndConditionsAccepted == true) {
-                      if (authCubit.signUpFormKey.currentState!.validate()) {
-                        authCubit.signUpWithEmailAndPassword();
-                      }
-                    }
-                  }),
+              state is SignUpLoadingState
+                  ? const CircularProgressIndicator(
+                      color: AppColors.primaryColor,
+                    )
+                  : CustomBtn(
+                      text: AppStrings.signUp,
+                      color: authCubit.isTermsAndConditionsAccepted == false
+                          ? AppColors.grey
+                          : null,
+                      onPressed: () {
+                        if (authCubit.isTermsAndConditionsAccepted == true) {
+                          if (authCubit.signUpFormKey.currentState!
+                              .validate()) {
+                            authCubit.signUpWithEmailAndPassword();
+                          }
+                        }
+                      }),
               const SizedBox(height: 16),
             ],
           ),

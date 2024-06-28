@@ -13,7 +13,8 @@ class AuthCubit extends Cubit<AuthState> {
   String? lastName;
   String? emailAddress;
   String? password;
-  bool? isTermsAndConditionsAccepted  = false;
+  bool? isTermsAndConditionsAccepted = false;
+  bool? obscurePasswordTextValue = true;
   GlobalKey<FormState> signUpFormKey = GlobalKey();
 
   signUpWithEmailAndPassword() async {
@@ -37,7 +38,11 @@ class AuthCubit extends Cubit<AuthState> {
         // ! emit sign up error state
         emit(SignUpErrorState(
             errorMessage: 'The account already exists for that email.'));
+      }if (e.code == 'invalid-email') {
+        // ! emit sign up error state
+        emit(SignUpErrorState(errorMessage: 'Invalid email address.'));
       }
+
     } catch (e) {
       // ! emit sign up error state
       emit(SignUpErrorState(errorMessage: e.toString()));
@@ -47,5 +52,14 @@ class AuthCubit extends Cubit<AuthState> {
   updateTermsAndConditionsCheckbox({required bool newValue}) {
     isTermsAndConditionsAccepted = newValue;
     emit(UpdateTermsAndConditionsState());
+  }
+
+  void obscurePasswordText() {
+    if (obscurePasswordTextValue == true) {
+      obscurePasswordTextValue = false;
+    } else {
+      obscurePasswordTextValue = true;
+    }
+    emit(ObscurePasswordTextUpdateState());
   }
 }
