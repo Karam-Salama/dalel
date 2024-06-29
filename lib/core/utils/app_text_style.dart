@@ -4,7 +4,6 @@ import 'package:dalel_app/core/utils/app_colors.dart';
 import 'package:flutter/material.dart';
 
 abstract class AppTextStyle {
-  
   static final pacifico400style64 = const TextStyle(
     fontSize: 64,
     fontWeight: FontWeight.w400,
@@ -61,10 +60,10 @@ abstract class AppTextStyle {
     fontFamily: 'Poppins',
   );
 
-  static final saira700style32 = const TextStyle(
-    fontSize: 32,
-    fontWeight: FontWeight.w700,
+  static final pacificoBoldstyle42 = const TextStyle(
+    fontSize: 42,
+    fontWeight: FontWeight.bold,
     color: AppColors.offWhite,
-    fontFamily: 'Saira',
+    fontFamily: 'Pacifico',
   );
 }

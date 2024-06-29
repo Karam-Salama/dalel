@@ -1,5 +1,5 @@
 import '../../features/auth/presentation/auth_cubit/auth_cubit.dart';
-import '../../features/auth/presentation/views/forget_password.dart';
+import '../../features/auth/presentation/views/forget_password_view.dart';
 import '../../features/auth/presentation/views/signIn_view.dart';
 import '../../features/auth/presentation/views/signUp_view.dart';
 import '../../features/home/presentation/views/home_view.dart';
