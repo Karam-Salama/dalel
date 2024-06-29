@@ -1,17 +1,15 @@
 import 'package:flutter/material.dart';
 
 import 'package:cherry_toast/cherry_toast.dart';
-import 'package:cherry_toast/resources/arrays.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import 'package:dalel_app/core/functions/app_functions.dart';
-import 'package:dalel_app/core/utils/app_colors.dart';
-import 'package:dalel_app/core/utils/app_strings.dart';
-import 'package:dalel_app/core/widgets/custom_btn.dart';
-import 'package:dalel_app/features/auth/presentation/auth_cubit/auth_cubit.dart';
-import 'package:dalel_app/features/auth/presentation/auth_cubit/auth_state.dart';
-import 'package:dalel_app/features/auth/presentation/widgets/custom_text_field.dart';
+import '../../../../core/functions/app_functions.dart';
+import '../../../../core/utils/app_colors.dart';
+import '../../../../core/utils/app_strings.dart';
+import '../../../../core/widgets/custom_btn.dart';
+import '../auth_cubit/auth_cubit.dart';
+import '../auth_cubit/auth_state.dart';
+import 'custom_text_field.dart';
 
 class CustomForgetPasswordForm extends StatelessWidget {
   const CustomForgetPasswordForm({super.key});

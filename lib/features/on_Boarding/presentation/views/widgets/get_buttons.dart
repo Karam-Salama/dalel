@@ -1,9 +1,9 @@
-import 'package:dalel_app/core/functions/app_functions.dart';
-import 'package:dalel_app/core/utils/app_colors.dart';
-import 'package:dalel_app/core/utils/app_strings.dart';
-import 'package:dalel_app/core/utils/app_text_style.dart';
-import 'package:dalel_app/core/widgets/custom_btn.dart';
-import 'package:dalel_app/features/on_Boarding/presentation/views/functions/onboarding.dart';
+import '../../../../../core/functions/app_functions.dart';
+import '../../../../../core/utils/app_colors.dart';
+import '../../../../../core/utils/app_strings.dart';
+import '../../../../../core/utils/app_text_style.dart';
+import '../../../../../core/widgets/custom_btn.dart';
+import '../functions/onboarding.dart';
 import 'package:flutter/material.dart';
 
 class GetButtons extends StatelessWidget {

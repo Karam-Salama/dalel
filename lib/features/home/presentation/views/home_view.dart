@@ -1,4 +1,4 @@
-import 'package:dalel_app/core/functions/app_functions.dart';
+import '../../../../core/functions/app_functions.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 

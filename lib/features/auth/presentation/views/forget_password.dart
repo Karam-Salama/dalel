@@ -1,7 +1,7 @@
-import 'package:dalel_app/features/auth/presentation/widgets/custom_forget_password_form.dart';
-import 'package:dalel_app/features/auth/presentation/widgets/forget_password_image.dart';
-import 'package:dalel_app/features/auth/presentation/widgets/forget_password_subtitle.dart';
-import 'package:dalel_app/features/auth/presentation/widgets/welcome_text_widget.dart';
+import '../widgets/custom_forget_password_form.dart';
+import '../widgets/forget_password_image.dart';
+import '../widgets/forget_password_subtitle.dart';
+import '../widgets/welcome_text_widget.dart';
 import 'package:flutter/material.dart';
 
 class ForgetPassword extends StatelessWidget {

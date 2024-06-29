@@ -1,4 +1,9 @@
+// ignore_for_file: file_names
+
 import 'package:cherry_toast/cherry_toast.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+
 import 'package:dalel_app/core/functions/app_functions.dart';
 import 'package:dalel_app/core/utils/app_colors.dart';
 import 'package:dalel_app/core/utils/app_strings.dart';
@@ -7,8 +12,6 @@ import 'package:dalel_app/features/auth/presentation/auth_cubit/auth_cubit.dart'
 import 'package:dalel_app/features/auth/presentation/auth_cubit/auth_state.dart';
 import 'package:dalel_app/features/auth/presentation/widgets/custom_text_field.dart';
 import 'package:dalel_app/features/auth/presentation/widgets/terms_and_conditions_widget.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 
 class CustomSignUpForm extends StatelessWidget {
   const CustomSignUpForm({super.key});

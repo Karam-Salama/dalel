@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:dalel_app/core/utils/app_text_style.dart';
+import '../../../../core/utils/app_text_style.dart';
 
 class WelcomeTextWidget extends StatelessWidget {
   const WelcomeTextWidget({ super.key, required this.text });

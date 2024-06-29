@@ -1,5 +1,5 @@
-import 'package:dalel_app/core/utils/app_strings.dart';
-import 'package:dalel_app/core/utils/app_text_style.dart';
+import '../../../../core/utils/app_strings.dart';
+import '../../../../core/utils/app_text_style.dart';
 import 'package:flutter/material.dart';
 
 class ForgetPasswordSubtitleWidget extends StatelessWidget {
