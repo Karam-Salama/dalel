@@ -10,7 +10,7 @@ class ForgetPasswordImage extends StatelessWidget {
       height: 235,
       width: 235,
       child: Image(
-        image: AssetImage(Assets.imagesForgetPassword),
+        image: AssetImage(Assets.imagesForgotPassword),
       ),
     );
   }

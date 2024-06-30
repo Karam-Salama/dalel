@@ -1,3 +1,5 @@
+import 'package:dalel_app/features/home/presentation/widgets/home_nav_bar_widget.dart';
+
 import '../../features/auth/presentation/auth_cubit/auth_cubit.dart';
 import '../../features/auth/presentation/views/forget_password_view.dart';
 import '../../features/auth/presentation/views/signIn_view.dart';
@@ -40,8 +42,8 @@ final GoRouter router = GoRouter(
       ),
     ),
     GoRoute(
-      path: '/home',
-      builder: (context, state) => const HomeView(),
+      path: '/homeNavBar',
+      builder: (context, state) => const HomeNavBarWidget(),
     ),
   ],
 );

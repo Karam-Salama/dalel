@@ -24,7 +24,7 @@ class CustomSignInForm extends StatelessWidget {
       listener: (BuildContext context, state) {
         if (state is SignInSuccessState) {
           FirebaseAuth.instance.currentUser!.emailVerified == true
-              ? customReplacementNavigate(context, '/home')
+              ? customReplacementNavigate(context, '/homeNavBar')
               : CherryToast.warning(
                   description: const Text("Please Verify Your Email Address",
                       style: TextStyle(color: Colors.black)),

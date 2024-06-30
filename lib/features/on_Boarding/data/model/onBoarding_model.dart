@@ -27,7 +27,7 @@ List<OnBoardingModel> onBoardingList = [
     subTitle: AppStrings.subTitleOnBoarding2,
   ),
   OnBoardingModel(
-    imagePath: Assets.imagesOnBoarding3,
+    imagePath: Assets.imagesOnBoarding,
     title: AppStrings.titleOnBoarding3,
     subTitle: AppStrings.subTitleOnBoarding3,
   ),
