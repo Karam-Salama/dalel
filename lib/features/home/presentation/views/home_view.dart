@@ -1,5 +1,8 @@
-import '../../../../core/functions/app_functions.dart';
-import 'package:firebase_auth/firebase_auth.dart';
+import '../widgets/home_sections/home_app_bar_section.dart';
+import '../widgets/home_sections/home_historical_character_section.dart';
+import '../widgets/home_sections/home_historical_period_section.dart';
+import '../widgets/home_sections/home_historical_souvenirs_section.dart';
+
 import 'package:flutter/material.dart';
 
 class HomeView extends StatelessWidget {
@@ -7,25 +10,19 @@ class HomeView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Home View'),
-        centerTitle: true,
-        elevation: 0,
-        backgroundColor: Colors.blueGrey,
-        foregroundColor: Colors.white,
-        automaticallyImplyLeading: false,
-        actions: [
-          IconButton(
-            onPressed: () {
-              FirebaseAuth.instance.signOut();
-              customReplacementNavigate(context, '/signIn');
-            },
-            icon: const Icon(Icons.logout_outlined),
-          ),
-        ],
+    return const Scaffold(
+      body: Padding(
+        padding: EdgeInsets.symmetric(horizontal: 16.0),
+        child: CustomScrollView(
+          physics: BouncingScrollPhysics(),
+          slivers: [
+            SliverToBoxAdapter(child: HomeAppBarSection()),
+            SliverToBoxAdapter(child: HistoricalPeriodsSection()),
+            SliverToBoxAdapter(child: HistoricalCharactersSection()),
+            SliverToBoxAdapter(child: HistoricalSouvenirsSection()),
+          ],
+        ),
       ),
-      body: const Center(child: Text('Home View')),
     );
   }
 }

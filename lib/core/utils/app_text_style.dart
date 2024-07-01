@@ -32,6 +32,13 @@ abstract class AppTextStyle {
     fontFamily: 'Poppins',
   );
 
+    static final poppins400style20 = const TextStyle(
+    fontSize: 20,
+    fontWeight: FontWeight.w400,
+    color: AppColors.deepBrown,
+    fontFamily: 'Poppins',
+  );
+
   static final poppins500style24 = const TextStyle(
     fontSize: 24,
     fontWeight: FontWeight.w500,
@@ -50,6 +57,13 @@ abstract class AppTextStyle {
     fontSize: 12,
     fontWeight: FontWeight.w500,
     color: AppColors.deepGrey,
+    fontFamily: 'Poppins',
+  );
+
+  static final poppins500style14 = const TextStyle(
+    fontSize: 12,
+    fontWeight: FontWeight.w500,
+    color: AppColors.deepBrown,
     fontFamily: 'Poppins',
   );
 

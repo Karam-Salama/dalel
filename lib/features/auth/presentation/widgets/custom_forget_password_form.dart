@@ -1,6 +1,5 @@
-import 'package:flutter/material.dart';
-
 import 'package:cherry_toast/cherry_toast.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../core/functions/app_functions.dart';

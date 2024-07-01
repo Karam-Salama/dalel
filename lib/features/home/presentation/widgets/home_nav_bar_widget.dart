@@ -1,9 +1,9 @@
-import 'package:dalel_app/core/utils/app_assets.dart';
-import 'package:dalel_app/core/utils/app_colors.dart';
-import 'package:dalel_app/features/cart/presentation/views/cart_view.dart';
-import 'package:dalel_app/features/home/presentation/views/home_view.dart';
-import 'package:dalel_app/features/profile/presentation/views/profile_view.dart';
-import 'package:dalel_app/features/search/presentation/views/search_view.dart';
+import '../../../../core/utils/app_assets.dart';
+import '../../../../core/utils/app_colors.dart';
+import '../../../cart/presentation/views/cart_view.dart';
+import '../views/home_view.dart';
+import '../../../profile/presentation/views/profile_view.dart';
+import '../../../search/presentation/views/search_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';

@@ -1,17 +1,20 @@
-
 class AppStrings {
-
   // #region App
   static const String appName = 'Dalel';
 
   // #region OnBoarding
   static const String skip = 'Skip';
-  static const String titleOnBoarding1 = 'Explore The history with Dalel in a smart way';
+  static const String titleOnBoarding1 =
+      'Explore The history with Dalel in a smart way';
   static const String titleOnBoarding2 = 'From every place on earth';
-  static const String titleOnBoarding3 = 'Using modern AI technology for better user experience';
-  static const String subTitleOnBoarding1 = 'Using our app’s history libraries you can find many historical periods ';
-  static const String subTitleOnBoarding2 = 'A big variety of ancient places from all over the world';
-  static const String subTitleOnBoarding3 = 'AI provide recommendations and helps you to continue the search journey';
+  static const String titleOnBoarding3 =
+      'Using modern AI technology for better user experience';
+  static const String subTitleOnBoarding1 =
+      'Using our app’s history libraries you can find many historical periods ';
+  static const String subTitleOnBoarding2 =
+      'A big variety of ancient places from all over the world';
+  static const String subTitleOnBoarding3 =
+      'AI provide recommendations and helps you to continue the search journey';
   static const String next = 'Next';
 
   // #region Auth
@@ -30,12 +33,15 @@ class AppStrings {
   static const String password = 'Password';
   static const String iHaveAgreeTo = 'I have agree to our';
   static const String termsAndConditions = ' Terms and Condition';
-  
+
   // #region Home
   static const String historicalPeriods = 'Historical periods';
   static const String historicalCharacters = 'Historical Characters';
   static const String historicalSouvenirs = 'Historical Souvenirs';
-  
+  static const String ancientEgypt = 'Ancient Egypt';
+  static const String islamicEra = 'Islamic Era';
+  static const String lionHeart = 'Lionheart';
+
   // #region Profile
   static const String profile = 'Profile';
   static const String account = 'Account';
@@ -68,13 +74,16 @@ class AppStrings {
 
   // region ForgotPassword
   static const String forgotPasswordScreen = 'Forgot Password';
-  static const String forgotPasswordScreenSubTitle = 'Enter your registered email below to receive password reset instruction';
+  static const String forgotPasswordScreenSubTitle =
+      'Enter your registered email below to receive password reset instruction';
   static const String sendResetPasswordLink = 'Send Reset Password Link';
 
   // region Verify Account
   static const String verifyAccountScreen = 'Verify Account';
-  static const String verifyAccountScreenTitle = 'Enter 4 digit code we have sent to testing@gmail.com';
-  static const String verifyAccountScreenSubTitle = 'Haven’t received verification code?';
+  static const String verifyAccountScreenTitle =
+      'Enter 4 digit code we have sent to testing@gmail.com';
+  static const String verifyAccountScreenSubTitle =
+      'Haven’t received verification code?';
   static const String resendCode = 'Resend Code';
   static const String verificationNow = 'Verification Now';
 
